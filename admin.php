@@ -124,7 +124,7 @@ $totalDepositAmount = $db->querySingle("SELECT SUM(CAST(deposit_amount AS FLOAT)
     <div class="dropdown" id="menuDropdown">
       <a href="broadcast.php"><i class="fa fa-bullhorn"></i> Broadcast</a>
       <a href="users.php"><i class="fa fa-users"></i> User Management</a>
-            <a href="https://trd.cc.nf/Auto/rovas/rovassoft-main/admingjhdsgffx"><i class="fa fa-gamepad"></i> GAME MANAGE</a>
+            <a href="https://rovasb-app.onrender.com/"><i class="fa fa-gamepad"></i> GAME MANAGE</a>
       <a href="logout.php"><i class="fa fa-sign-out-alt"></i> Logout</a>
     </div>
   </div>
