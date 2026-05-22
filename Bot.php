@@ -452,7 +452,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && $_GET['ac
                 ]
             ];
             
-            sendPhoto($tgid, "https://i.ibb.co/zWgnCxLB/IMG-20250812-102227-999.jpg", $message, $keyboard);
+            sendPhoto($tgid, "https://i.ibb.co/zWgnCxLB/IMG-20250812-102227-999.jpg", $message, $keyboard, 'HTML');
         } 
         elseif ($event === 'deposit') {
             // Check if user has already made a deposit
@@ -629,7 +629,7 @@ elseif (isset($update['callback_query'])) {
                 $lang = getUserData($userId, 'language') ?: 'en';
                 $text = $instructions_translations[$lang] ?? $instructions_translations['en'];
                 $keyboard = ['inline_keyboard' => [[['text' => "🔙 Back", 'callback_data' => "main"]]]];
-                sendMessage($chatId, $text, $keyboard);
+                sendMessage($chatId, $text, $keyboard, 'HTML');
                 break;
                 
             case 'main':
@@ -721,7 +721,7 @@ function runMain($chatId, $userId) {
     // Send menu photo
     sendPhoto(
         $chatId,
-        "https://i.ibb.co/qLjsWV2W/IMG-20250812-091057-129.jpg",
+        "https://raw.githubusercontent.com/Grund-winner/predictorrovas/main/images/menu.jpg",
         $t['main_menu'],
         $keyboard
     );
